@@ -1,6 +1,6 @@
 
 const validPin = 1234
-
+// add Money fruture---------------------------------
 document.getElementById("add-money-btn").addEventListener('click', function(e){
 e.preventDefault()
 const bank = document.getElementById("bank").value
@@ -29,4 +29,38 @@ const totalNewAvailableBalance = amount + availableBalance;
 
 document.getElementById("available-balance").innerText = totalNewAvailableBalance
 
+})
+
+
+// cashout fruture-----------------
+document.getElementById("withdrow-btn").addEventListener('click', function(e){
+e.preventDefault()
+
+const amount = parseInt(document.getElementById('withdrow-amount').value)
+const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+
+
+const totalNewAvailableBalance = availableBalance - amount
+console.log(totalNewAvailableBalance);
+document.getElementById("available-balance").innerText = totalNewAvailableBalance
+
+
+
+})
+
+
+
+
+
+
+// button toggle
+document.getElementById("add-money-button").addEventListener('click', function(){
+    document.getElementById("cash-out-parents").style.display = "none"
+    document.getElementById("add-money-parents").style.display = "block"
+})
+
+
+document.getElementById("cash-out-button").addEventListener('click', function(){
+    document.getElementById("add-money-parents").style.display =  "none"
+    document.getElementById("cash-out-parents").style.display = "block"
 })
