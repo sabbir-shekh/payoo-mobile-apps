@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>hello</h1>
+<body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center ">
+
+    <div class=" h-[130px] w-[300px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center">
+<img src="./assets/Group.png" alt="">
+    </div>
+
+    <form class=" bg-white rounded-[24px] p-8 w-[350px]">
+        
+        <div>
+            <label for="" class="font-semibold">Mobile Number</label>
+        <br>
+            <input type="text" id="mobile-number" placeholder="Enter your number" class="input bg-[#F4F5F7] mt-3 rounded-3xl" />
+        </div>
+
+
+        <div class="mt-5">
+            <label for="" class="font-semibold">4 Digit Pin</label>
+        <br>
+            <input type="text" id="pin-number" placeholder="Enter 4 Digit Pin" class="input bg-[#F4F5F7] mt-3 rounded-3xl" />
+        </div>
+        <button  class="btn  w-full mt-5 rounded-3xl bg-[#0874F2] text-white" id="login-button">Login</button>
+
+    </form>
+
+
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
