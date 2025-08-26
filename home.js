@@ -1,17 +1,45 @@
 
 const validPin = 1234
+
+
+// function to get element value 
+function getInputValueNumber (id){
+    const inputField =document.getElementById(id)
+    const inputFieldValue = inputField.value
+    const inputFieldValueNumber = parseInt(inputFieldValue)
+    return inputFieldValueNumber
+}
+
+function getInputValue (id){
+    const inputField =document.getElementById(id)
+    const inputFieldValue = inputField.value
+    return inputFieldValue
+}
+
+// function to get inner text
+function getInnerText(id){
+    const element = document.getElementById(id)
+    const elementValue = element.innerText
+    const elementValueNumber = parseInt(elementValue)
+return elementValueNumber
+}
+
+
+
+
+
 // add Money fruture---------------------------------
 document.getElementById("add-money-btn").addEventListener('click', function(e){
 e.preventDefault()
-const bank = document.getElementById("bank").value
-const accountNumber = document.getElementById("account-number").value
-const amount = parseInt(document.getElementById("add-amount").value)
+const bank = getInputValue("bank")
+const accountNumber = getInputValue("account-number")
+const amount = getInputValueNumber("add-amount")
 
 
-const pin  = parseInt(document.getElementById("add-pin").value)
+const pin  = getInputValueNumber("add-pin")
 
 
-const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+const availableBalance = getInnerText("available-balance")
 console.log(availableBalance)
 
 if(accountNumber.length < 11){
@@ -36,9 +64,21 @@ document.getElementById("available-balance").innerText = totalNewAvailableBalanc
 document.getElementById("withdrow-btn").addEventListener('click', function(e){
 e.preventDefault()
 
-const amount = parseInt(document.getElementById('withdrow-amount').value)
-const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+const amount = getInputValueNumber('withdrow-amount')
+const availableBalance = getInnerText("available-balance")
+const agentNumber = getInputValue("agent-number")
+const pinNumber = getInputValueNumber("pin-2")
 
+if(agentNumber.length < 11){
+    alert('Please Provide valid Account Number')
+    return;
+}
+
+if(pinNumber!== validPin){
+    alert('Please provide valid pin number')
+        return;
+    }
+    
 
 const totalNewAvailableBalance = availableBalance - amount
 console.log(totalNewAvailableBalance);
