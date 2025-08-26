@@ -25,6 +25,11 @@ return elementValueNumber
 }
 
 
+// function to set inner text
+function setInnerText (value){
+const availableBalanceElement = document.getElementById('available-balance')
+availableBalanceElement.innerText = value
+}
 
 
 
@@ -54,8 +59,7 @@ if(pin !== validPin){
     
 
 const totalNewAvailableBalance = amount + availableBalance;
-
-document.getElementById("available-balance").innerText = totalNewAvailableBalance
+setInnerText(totalNewAvailableBalance)
 
 })
 
@@ -82,25 +86,110 @@ if(pinNumber!== validPin){
 
 const totalNewAvailableBalance = availableBalance - amount
 console.log(totalNewAvailableBalance);
-document.getElementById("available-balance").innerText = totalNewAvailableBalance
+setInnerText(totalNewAvailableBalance)
 
 
 
 })
 
+// toggle button style sortcut
+
+function handleToggleButtonToggle (id){
+    const formButtons = document.getElementsByClassName('form-btn')
+    for(const btn of formButtons){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-300")
+    }
+    document.getElementById(id).classList.remove("border-gray-300")
+    document.getElementById(id).classList.add("border-[#0874f2", "bg-[#0874f20d]")
+
+}
+
+// aro button troggle sortcurt 1
+function handleToggle (id){
+     const forms = document.getElementsByClassName('form')
+   for (const form of forms){
+    form.style.display = "none"
+   }
+   document.getElementById(id).style.display= 'block'
+
+
+}
+
+//button toggle sortcurt2
+document.getElementById("add-money-button").addEventListener('click', function(e){
+   const forms = document.getElementsByClassName('form')
+
+   for (const form of forms){
+    form.style.display = "none"
+   }
+   document.getElementById('add-money-parents').style.display= 'block'
+   
+   handleToggleButtonToggle("add-money-button")
+})
+
+
+
+
+document.getElementById("cash-out-button").addEventListener('click', function(){
+    const forms = document.getElementsByClassName('form')
+   for (const form of forms){
+    form.style.display = "none"
+   }
+   document.getElementById("cash-out-parents").style.display= 'block'
+
+   handleToggleButtonToggle("cash-out-button")
+})
+
+
+
+document.getElementById("Transfer-button").addEventListener('click', function(){
+    const forms = document.getElementsByClassName('form')
+   for (const form of forms){
+    form.style.display = "none"
+   }
+   document.getElementById("transfer-parents").style.display= 'block'
+   handleToggleButtonToggle("Transfer-button")
+})
+
+
+
+document.getElementById("get-bonus-button").addEventListener('click', function(){
+    const forms = document.getElementsByClassName('form')
+   for (const form of forms){
+    form.style.display = "none"
+   }
+   document.getElementById("get-bonus-parents").style.display= 'block'
+   handleToggleButtonToggle("get-bonus-button")
+})
+
+
+
+document.getElementById("pay-bill-button").addEventListener('click', function(){
+   handleToggle("pay-bil-parents")    // sortcut 1
+   handleToggleButtonToggle("pay-bill-button")
+})
+
+
+
+
+document.getElementById("transjection-button").addEventListener('click', function(){
+   handleToggle("tranjection-parents")   // sortcut 1
+   handleToggleButtonToggle("transjection-button")
+})
 
 
 
 
 
 // button toggle
-document.getElementById("add-money-button").addEventListener('click', function(){
-    document.getElementById("cash-out-parents").style.display = "none"
-    document.getElementById("add-money-parents").style.display = "block"
-})
+// document.getElementById("add-money-button").addEventListener('click', function(){
+//     document.getElementById("cash-out-parents").style.display = "none"
+//     document.getElementById("add-money-parents").style.display = "block"
+// })
 
 
-document.getElementById("cash-out-button").addEventListener('click', function(){
-    document.getElementById("add-money-parents").style.display =  "none"
-    document.getElementById("cash-out-parents").style.display = "block"
-})
+// document.getElementById("cash-out-button").addEventListener('click', function(){
+//     document.getElementById("add-money-parents").style.display =  "none"
+//     document.getElementById("cash-out-parents").style.display = "block"
+// })
