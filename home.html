@@ -45,7 +45,8 @@
     <!-- paragraph section -->
      <div class=" mt-8 p-3">
 <h1>🔥 <span class="font-bold">Welcome to Payooo!</span></h1>   
-<p class="text-[#08080880] text-[12px]"> Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+<p class="text-[#08080880] text-[12px]">Experience easy, fast, and convenient financial services with us. <br>
+Enjoy low cashout charges and a smarter way to manage your money.</p>
      </div>
 
      <!-- card-section -->
@@ -89,9 +90,9 @@
 
 
 
-    <div class="all-from-section max-w-lg mx-auto">
+    <div class="all-from-section  max-w-lg mx-auto">
         <!-- add mony -->
-         <div class="form" id="add-money-parents" style="display: none;">
+         <div class="form" id="add-money-parents" >
             <h1 class="my-7 font-bold text-[1.2rem] pl-5">Add Money</h1>
             <form class="bg-white rounded-[24px] p-8">
                 <div class="mb-3 " >
@@ -138,7 +139,7 @@
 
 
  <!-- cash out section -->
-  <div class="form" id="cash-out-parents">
+  <div class="form" id="cash-out-parents" style="display: none;">
     <h1 class="my-7 font-bold text-[1.2rem] pl-5">Cash out</h1>
       <form class="bg-white rounded-[24px] p-8">
                 
@@ -171,41 +172,115 @@
 
 
   <!-- transfer section -->
-  <div class="form" id="transfer-parents">
+  <div class="form" id="transfer-parents" style="display: none;">
     <h1 class="my-7 font-bold text-[1.2rem] pl-5">Transfer Money</h1>
-     
+       <form class="bg-white rounded-[24px] p-8">
+                <div class="mt-3">
+                 <label for="" class="font-semibold">User Account Number</label>
+                    <br>
+    <input type="text" id="account-number" placeholder="Enter 11 digit number"   class="input 
+    bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                    </div>
+
+
+                <div class="mt-3">
+                    <label for="" class="font-semibold">Amount</label>
+                    <br>
+            <input id="add-amount" type="text"  placeholder="Enter amount to transfer" class="input 
+            bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                </div>
+
+
+                <div class="mt-3">
+                    <label for="" class="font-semibold">Pin Number</label>
+                    <br>
+            <input id="add-pin" type="text"  placeholder="Enter 4 digit pin number" class="input 
+            bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                </div>
+
+                <button id="add-money-btn" class="btn  w-full mt-5 rounded-3xl bg-[#0874F2] text-white font-bold" >Send Now</button>
+            </form>
   </div>
 
 
 
 <!-- get bonus section-->
-  <div class="form" id="get-bonus-parents">
+  <div class="form" id="get-bonus-parents" style="display: none;">
     <h1 class="my-7 font-bold text-[1.2rem] pl-5">Get Bonus</h1>
-     
+     <form class="bg-white rounded-[24px] p-8">
+            
+                <div class="mt-3">
+                    <label for="" class="font-semibold">Enter Bonus Coupon</label>
+                    <br>
+            <input id="add-pin" type="text"  placeholder="Enter your coupon" class="input 
+            bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                </div>
+
+                <button id="add-money-btn" class="btn  w-full mt-5 rounded-3xl bg-[#0874F2] text-white font-bold" >Get Bonus</button>
+            </form>
   </div>
 
 
 
 <!-- pay bil  section-->
-  <div class="form" id="pay-bil-parents">
+  <div class="form" id="pay-bil-parents" style="display: none;">
     <h1 class="my-7 font-bold text-[1.2rem] pl-5">Pay Bill</h1>
-    
+     <form class="bg-white rounded-[24px] p-8">
+                <div class="mb-3 " >
+                    <label for="" class="font-semibold">Select To Pay</label> <br>
+                    <select id="bank" class="select bg-[#F4F5F7] mt-3 rounded-3xl w-full">
+                        <option disabled selected>Select back</option>Select Pay Option
+                        <option>Electricity Bill</option>
+                        <option>Water Bill</option>
+                        <option>Gas Bill</option>
+                        <option>Internet Bill</option>
+                        <option>Landline</option>
+                        <option>Educational Fees</option>
+                        
+                    </select>
+                </div>
+
+                <div class="mt-3">
+                 <label for="" class="font-semibold">Biller Account Number</label>
+                    <br>
+    <input type="text" id="account-number" placeholder="Enter account number"   class="input 
+    bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                    </div>
+
+
+                <div class="mt-3">
+                    <label for="" class="font-semibold">Amount to Pay</label>
+                    <br>
+            <input id="add-amount" type="text"  placeholder="Add Amount to pay" class="input 
+            bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                </div>
+
+
+                <div class="mt-3">
+                    <label for="" class="font-semibold">Pin Number</label>
+                    <br>
+            <input id="add-pin" type="text"  placeholder="Enter 4 digit pin number" class="input 
+            bg-[#F4F5F7] mt-3 rounded-3xl w-full" />
+                </div>
+
+                <button id="add-money-btn" class="btn  w-full mt-5 rounded-3xl bg-[#0874F2] text-white font-bold" >Pay Now</button>
+            </form>
   </div>
 
 
 
   <!-- tranjection section -->
-  <div class="form" id="tranjection-parents">
+  <div class="form" id="tranjection-parents" style="display: none;">
     <div class="flex justify-between items-center">
         <h1 class="my-7 font-bold text-[1.2rem] pl-5">Transaction History</h1>
          <p class="text-[#08080880]  pr-5">View All</p>
     </div>
      
-  </div>
+  
 
 
 
- <div id="transaction-container">
+ <div id="transaction-container" >
         <div class=" bg-white rounded-xl p-3 flex justify-between">
     <div class="flex items-center">
         <div class=" p-3 rounded-full bg-[#F4F5F7]">
@@ -223,6 +298,7 @@
 </div>
  </div>
 
+</div>
  </div>
 
 
