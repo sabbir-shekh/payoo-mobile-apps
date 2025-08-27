@@ -1,5 +1,6 @@
 
 const validPin = 1234
+const transactionData = []
 
 
 // function to get element value 
@@ -61,6 +62,14 @@ if(pin !== validPin){
 const totalNewAvailableBalance = amount + availableBalance;
 setInnerText(totalNewAvailableBalance)
 
+const data = {
+    name: "Add money",
+    date:new Date().toLocaleTimeString()
+}
+
+transactionData.push(data)
+
+
 })
 
 
@@ -88,8 +97,48 @@ const totalNewAvailableBalance = availableBalance - amount
 console.log(totalNewAvailableBalance);
 setInnerText(totalNewAvailableBalance)
 
+const data ={
+    name: "Cash Out",
+    date:new Date().toLocaleTimeString()
+}
+
+transacationData.push(data)
 
 
+})
+
+
+document.getElementById("transjection-button").addEventListener('click', function(){
+    const transactionContainer = document.getElementById("transaction-container")
+transactionContainer.innerText =""
+
+
+    for ( const data of transactionData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+           <div class=" bg-white rounded-xl p-3 flex justify-between mt-5">
+    <div class="flex items-center">
+        <div class="p-3 rounded-full bg-[#F4F5F7]">
+            <img src="./assets/wallet1.png" class="mx-auto " alt="">
+        </div>
+        <div class="ml-3">
+            <h1>${data.name}</h1>
+            <p>${data.date}</p>
+        </div>
+    </div>
+
+    <div>
+        <i class= "fa-solid fa-ellipsis-vertical"></i>
+    </div>
+</div>
+
+        `
+        transactionContainer.appendChild(div)
+     
+    
+        
+    }
+    
 })
 
 // toggle button style sortcut
