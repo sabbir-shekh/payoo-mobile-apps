@@ -40,6 +40,10 @@ e.preventDefault()
 const bank = getInputValue("bank")
 const accountNumber = getInputValue("account-number")
 const amount = getInputValueNumber("add-amount")
+if(amount <= 0 && amount < 50){
+    alert('Invaied Amount, Please give valid Amount.')
+    return;
+}
 
 
 const pin  = getInputValueNumber("add-pin")
@@ -79,6 +83,12 @@ e.preventDefault()
 
 const amount = getInputValueNumber('withdrow-amount')
 const availableBalance = getInnerText("available-balance")
+if(amount<=0 || amount>availableBalance){
+    alert('Please Provide Valid Amount')
+    return;
+}
+
+
 const agentNumber = getInputValue("agent-number")
 const pinNumber = getInputValueNumber("pin-2")
 
