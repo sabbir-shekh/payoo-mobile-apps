@@ -112,7 +112,7 @@ const data ={
     date:new Date().toLocaleTimeString()
 }
 
-transacationData.push(data)
+transactionData.push(data)
 
 
 })
